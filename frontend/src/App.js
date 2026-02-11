@@ -13,9 +13,9 @@ function App() {
     setLoading(true);
     try {
       // Flask server ka address
-      const response = await axios.post('https://email-spam-detector-30f1.onrender.com', {
-        message: message
-      });
+      const response = await axios.post('https://email-spam-detector-30f1.onrender.com/predict', {
+      message: message
+});
       setResult(response.data.prediction);
     } catch (error) {
       alert("Error: Kya Backend start hai?");
