@@ -13,7 +13,7 @@ function App() {
     setLoading(true);
     try {
       // Flask server ka address
-      const response = await axios.post('http://127.0.0.1:5000/predict', {
+      const response = await axios.post('https://email-spam-detector-30f1.onrender.com', {
         message: message
       });
       setResult(response.data.prediction);
